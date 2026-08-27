@@ -1,61 +1,74 @@
-# P-BAN R&D Team
-
-**P-ban.com（株式会社ピーバンドットコム）** の R&D チームです。東京・千代田区で、
-プリント基板の設計・製造・実装をオンラインで扱っています。
-
-ここには、自社のハードウェア開発から出てきたファームウェアとツールを置いています。
-
-## お知らせ
-
-技術者向けの更新情報です。
-
-- **2026-08-27** — [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware)
-  に J-Link 経由の書き込みを追加しました。Linux / macOS / Windows 対応。ベンダ提供の
-  フラッシュアルゴリズムをターゲット RAM 上で走らせるので、OpenOCD 経路よりかなり速く
-  書けます。
-- **2026-06-05** — solist_ai_iap_firmware を公開しました。
-- **近日** — gene + Solist-AI 開発キットのファームウェアを公開します。
-
-## gene — センサ PoC のセミカスタム開発
-
-[**gene**](https://www.p-ban.com/services/gene/) は、評価ボードではなく「動くデモ機」が
-必要なときのための開発サービスです。gene Core（40 × 40 × 20 mm、ESP32-S3 または
-STM32F446）にセンサモジュールを組み合わせ、回路・基板・実装・ファームウェア・データを
-見るための PC アプリまでまとめて用意します。
-
-共通プラットフォーム 7 割 + カスタム 3 割くらいの作りにしてあるので、PoC のために
-フルスクラッチの開発案件を立てなくて済みます。
-
-## gene + Solist-AI 開発キット
-
-ROHM のオンデバイス AI ソリューション
-[**Solist-AI™**](https://www.rohm.co.jp/support/solist-ai) のエコシステムパートナーとして、
-Solist-AI マイコンを載せた gene モジュールを開発しました。推論はデバイス上で完結します。
-
-ノーコードで組込み AI を試せる **gene + Solist-AI 開発キット** を販売中です。ROHM 主催の
-エッジ AI 開発コンテスト [ROHM EDGE HACK CHALLENGE 2026](https://rehc.jp/) では、
-選考通過者に提供されるキットにもなっています。
-
-## 公開しているもの
-
-### [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware)
-
-開発キットの Solist-AI モジュール（ROHM/LAPIS ML63Q2537、Cortex-M0+）にプリインストール
-されている IAP（In-Application Programming）ファームウェアです。内蔵フラッシュ上部 32 KB
-に書き込まれていて、起動すると UART を立ち上げ、XMODEM-CRC でユーザファームウェアを
-受け取り、アプリ領域に書き込んで REMAP + リセットで起動します。
-
-**デバッグプローブなしで、シリアルケーブルだけでファームウェアを差し替えられる**のがこの
-仕組みの狙いです。IAP 自体を工場で書き込むための J-Link / OpenOCD ツールも同梱しています。
+<p align="left">
+  <a href="https://www.p-ban.com/"><img src="https://www.p-ban.com/services/gene/images/logo.png" width="160" alt="P板.com"></a><br><br>
+  <strong>P-BAN R&D Team</strong><br>
+  株式会社ピーバンドットコム（p-ban.com Corp.）
+</p>
 
 ---
 
-### English
+<p align="center">
+  プリント基板ネット通販サイト「P板.com（ピーバンドットコム）」の運営を中心に、<br>
+  設計・製造・部品実装までをインターネット上でワンストップ提供するサービスを展開。
+</p>
 
-We are the R&D team at **P-ban.com** (株式会社ピーバンドットコム), a PCB design,
-fabrication and assembly business in Tokyo. We publish firmware and tooling from our
-own hardware work here — currently
-[solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware), the
-IAP firmware pre-installed on the Solist-AI module of our **gene + Solist-AI
-development kit**, which lets kit owners flash their own application firmware over a
-serial cable with no debug probe. The kit's application firmware follows soon.
+---
+
+<p align="">
+  <a href="https://www.p-ban.com/">P板.com</a> ·
+  <a href="https://www.p-ban.com/services/gene/">gene</a> ·
+  <a href="https://www.p-ban.com/services/gene/solist-ai.html">Solist-AI™ × gene 開発キット</a>
+</p>
+
+---
+
+## gene
+
+> そのセンサ、geneが動かす。
+
+<p align="center">
+  <img src="https://www.p-ban.com/services/gene/images/hand_gene2.webp" width="460" alt="手のひらの上に浮かぶ gene Core">
+</p>
+
+geneは、回路図とBOM（部品表）を渡すだけで、基板設計・製造からファームウェア・PCアプリまでをワンストップで仕上げる、センサーPoC特化のセミカスタム開発サービスです。
+
+[センサPoCのセミカスタム開発サービス gene | P板.com](https://www.p-ban.com/services/gene/)
+
+## Solist-AI™ × gene｜ノーコード組み込みAI開発キット
+
+> 箱を開けたら、その日からAIを試せる。
+
+<p align="center">
+  <img src="https://www.p-ban.com/services/gene/images/concept231.webp" width="560" alt="Solist-AI × gene 開発キット">
+</p>
+
+ROHM Solist-AI™ を搭載した gene 開発キット。コードを書かずに、IC上で「学習→推論」まで。ファームウェア実装もモデル変換も専任エンジニアも不要。必要なのは、データとアイデアだけ。
+
+[Solist-AI™ × gene｜ノーコード組み込みAI開発キット | P板.com](https://www.p-ban.com/services/gene/solist-ai.html)
+
+### ファームウェアの構成
+
+<p align="center">
+  <img src="https://www.p-ban.com/services/gene/images/concept233.webp" width="440" alt="開発キット モジュール">
+</p>
+
+```mermaid
+flowchart LR
+  subgraph core["gene Core ・ ESP32-S3"]
+    fw1["<b>gene firmware</b><br/>プリコンパイル済みライブラリ + hook API"]
+  end
+  subgraph mod["Solist-AIモジュール ・ ML63Q2537"]
+    fw2["<b>Solist-AIモジュール ファームウェア</b>"]
+    fw3["<b>IAPファームウェア</b><br/>フラッシュ上部 32KB"]
+  end
+  core <--> mod
+```
+
+| ファームウェア | 提供方法 | |
+| --- | --- | --- |
+| gene firmware | プリコンパイル済みライブラリ + hook API のSDK | 公開準備中 |
+| Solist-AIモジュール ファームウェア | バイナリ（Releases） | 公開準備中 |
+| Solist-AIモジュール IAPファームウェア | ソース | [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware) |
+
+### [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware)
+
+ML63Q2537向けのIAP（In-Application Programming）ファームウェア。内蔵フラッシュ上部32KBに書き込まれ、UART（XMODEM-CRC）でユーザファームウェアイメージを受け取り、ユーザファームウェア領域に書き込んだ後、REMAPとリセットで新しいイメージを起動します。
