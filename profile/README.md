@@ -21,24 +21,29 @@
 
 ---
 
-## gene
+
+# gene
+
 
 > そのセンサ、geneが動かす。
 
 <p align="center">
-  <img src="https://www.p-ban.com/services/gene/images/hand_gene2.webp" width="460" alt="手のひらの上に浮かぶ gene Core">
+  <img src="https://www.p-ban.com/services/gene/images/hand_gene2.webp" width="230" alt="手のひらの上に浮かぶ gene Core">
 </p>
 
 geneは、回路図とBOM（部品表）を渡すだけで、基板設計・製造からファームウェア・PCアプリまでをワンストップで仕上げる、センサーPoC特化のセミカスタム開発サービスです。
 
 [センサPoCのセミカスタム開発サービス gene | P板.com](https://www.p-ban.com/services/gene/)
 
-## Solist-AI™ × gene｜ノーコード組み込みAI開発キット
+
+
+# Solist-AI™ × gene｜ノーコード組み込みAI開発キット
+
 
 > 箱を開けたら、その日からAIを試せる。
 
 <p align="center">
-  <img src="https://www.p-ban.com/services/gene/images/concept231.webp" width="560" alt="Solist-AI × gene 開発キット">
+  <img src="https://www.p-ban.com/services/gene/images/concept231.webp" width="280" alt="Solist-AI × gene 開発キット">
 </p>
 
 ROHM Solist-AI™ を搭載した gene 開発キット。コードを書かずに、IC上で「学習→推論」まで。ファームウェア実装もモデル変換も専任エンジニアも不要。必要なのは、データとアイデアだけ。
@@ -48,7 +53,7 @@ ROHM Solist-AI™ を搭載した gene 開発キット。コードを書かず�
 ### ファームウェアの構成
 
 <p align="center">
-  <img src="https://www.p-ban.com/services/gene/images/concept233.webp" width="440" alt="開発キット モジュール">
+  <img src="https://www.p-ban.com/services/gene/images/concept233.webp" width="220" alt="開発キット モジュール">
 </p>
 
 ```mermaid
@@ -66,9 +71,6 @@ flowchart LR
 | ファームウェア | 提供方法 | |
 | --- | --- | --- |
 | gene firmware | プリコンパイル済みライブラリ + hook API のSDK | 公開準備中 |
-| Solist-AIモジュール ファームウェア | バイナリ（Releases） | 公開準備中 |
+| Solist-AIモジュール ファームウェア | バイナリ（Releases） | [solist_ai_module_firmware](https://github.com/pban-rd-dev/solist_ai_module_firmware) |
 | Solist-AIモジュール IAPファームウェア | ソース | [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware) |
 
-### [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware)
-
-ML63Q2537向けのIAP（In-Application Programming）ファームウェア。内蔵フラッシュ上部32KBに書き込まれ、UART（XMODEM-CRC）でユーザファームウェアイメージを受け取り、ユーザファームウェア領域に書き込んだ後、REMAPとリセットで新しいイメージを起動します。
