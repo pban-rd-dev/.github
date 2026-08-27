@@ -1,48 +1,61 @@
 # P-BAN R&D Team
 
-We are the R&D team at **P-ban.com** — 株式会社ピーバンドットコム — a
-printed-circuit-board company based in Chiyoda, Tokyo. P-ban.com runs an online
-service covering PCB design, fabrication and assembly, and this organization is
-where we publish firmware and tooling that comes out of our own hardware work.
+**P-ban.com（株式会社ピーバンドットコム）** の R&D チームです。東京・千代田区で、
+プリント基板の設計・製造・実装をオンラインで扱っています。
 
-## gene — semi-custom development for sensor PoCs
+ここには、自社のハードウェア開発から出てきたファームウェアとツールを置いています。
 
-[**gene**](https://www.p-ban.com/services/gene/) is our development service for
-teams that need a working sensor demo rather than an evaluation board. A gene
-Core board (40 × 40 × 20 mm, ESP32-S3 or STM32F446) pairs with a sensor module,
-and we take it the whole way: schematic, PCB, assembly, firmware, and a PC
-application for visualising the data.
+## お知らせ
 
-The idea is roughly 70 % shared platform and 30 % custom, so a proof of concept
-does not have to become a full-scratch engineering project. *(Service page is in
-Japanese.)*
+技術者向けの更新情報です。
 
-## gene + Solist-AI development kit
+- **2026-08-27** — [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware)
+  に J-Link 経由の書き込みを追加しました。Linux / macOS / Windows 対応。ベンダ提供の
+  フラッシュアルゴリズムをターゲット RAM 上で走らせるので、OpenOCD 経路よりかなり速く
+  書けます。
+- **2026-06-05** — solist_ai_iap_firmware を公開しました。
+- **近日** — gene + Solist-AI 開発キットのファームウェアを公開します。
 
-P-ban.com is an ecosystem partner for
-[**Solist-AI™**](https://www.rohm.com/support/solist-ai), ROHM's on-device edge
-AI solution, and we built a gene module around the Solist-AI microcontroller so
-that inference runs on the device itself.
+## gene — センサ PoC のセミカスタム開発
 
-The **gene + Solist-AI development kit** — a no-code embedded-AI development kit
-— is now on sale. It is also the kit provided to selected entrants of
-[ROHM EDGE HACK CHALLENGE 2026](https://rehc.jp/), ROHM's edge-AI development
-contest, which we support as a partner.
+[**gene**](https://www.p-ban.com/services/gene/) は、評価ボードではなく「動くデモ機」が
+必要なときのための開発サービスです。gene Core（40 × 40 × 20 mm、ESP32-S3 または
+STM32F446）にセンサモジュールを組み合わせ、回路・基板・実装・ファームウェア・データを
+見るための PC アプリまでまとめて用意します。
 
-## What we publish here
+共通プラットフォーム 7 割 + カスタム 3 割くらいの作りにしてあるので、PoC のために
+フルスクラッチの開発案件を立てなくて済みます。
+
+## gene + Solist-AI 開発キット
+
+ROHM のオンデバイス AI ソリューション
+[**Solist-AI™**](https://www.rohm.co.jp/support/solist-ai) のエコシステムパートナーとして、
+Solist-AI マイコンを載せた gene モジュールを開発しました。推論はデバイス上で完結します。
+
+ノーコードで組込み AI を試せる **gene + Solist-AI 開発キット** を販売中です。ROHM 主催の
+エッジ AI 開発コンテスト [ROHM EDGE HACK CHALLENGE 2026](https://rehc.jp/) では、
+選考通過者に提供されるキットにもなっています。
+
+## 公開しているもの
 
 ### [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware)
 
-The IAP (In-Application Programming) firmware pre-installed on the kit's
-Solist-AI module (ROHM/Lapis ML63Q2537, Cortex-M0+). It is factory-flashed into
-the top 32 KB of internal flash. On boot it brings up a UART, receives a user
-firmware image over XMODEM-CRC, programs it into the application region, then
-remaps and resets to boot it.
+開発キットの Solist-AI モジュール（ROHM/LAPIS ML63Q2537、Cortex-M0+）にプリインストール
+されている IAP（In-Application Programming）ファームウェアです。内蔵フラッシュ上部 32 KB
+に書き込まれていて、起動すると UART を立ち上げ、XMODEM-CRC でユーザファームウェアを
+受け取り、アプリ領域に書き込んで REMAP + リセットで起動します。
 
-That is how kit owners replace the application firmware with their own — over a
-serial cable, with no debug probe required. The repository also carries the
-J-Link and OpenOCD tooling used to install the IAP itself at the factory.
+**デバッグプローブなしで、シリアルケーブルだけでファームウェアを差し替えられる**のがこの
+仕組みの狙いです。IAP 自体を工場で書き込むための J-Link / OpenOCD ツールも同梱しています。
 
-### Application firmware for the kit — coming soon
+---
 
-The firmware that ships on the development kit will be published here shortly.
+### English
+
+We are the R&D team at **P-ban.com** (株式会社ピーバンドットコム), a PCB design,
+fabrication and assembly business in Tokyo. We publish firmware and tooling from our
+own hardware work here — currently
+[solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware), the
+IAP firmware pre-installed on the Solist-AI module of our **gene + Solist-AI
+development kit**, which lets kit owners flash their own application firmware over a
+serial cable with no debug probe. The kit's application firmware follows soon.
