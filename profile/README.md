@@ -50,6 +50,10 @@ ROHM Solist-AI™ を搭載した gene 開発キット。コードを書かず�
 
 [Solist-AI™ × gene｜ノーコード組み込みAI開発キット | P板.com](https://www.p-ban.com/services/gene/solist-ai.html)
 
+
+
+# ファームウェアについて
+
 ### ファームウェアの構成
 
 <p align="center">
@@ -68,9 +72,24 @@ flowchart LR
   core <--> mod
 ```
 
+###  入手先
+
 | ファームウェア | 提供方法 | |
 | --- | --- | --- |
-| gene firmware | プリコンパイル済みライブラリ + hook API のSDK | 公開準備中 |
+| gene firmware | プリコンパイル済みライブラリ + hook API のSDK | [gene_firmware_for_solist_ai_dev_kit](https://github.com/pban-rd-dev/gene_firmware_for_solist_ai_dev_kit/settings) |
 | Solist-AIモジュール ファームウェア | バイナリ（Releases） | [solist_ai_module_firmware](https://github.com/pban-rd-dev/solist_ai_module_firmware) |
 | Solist-AIモジュール IAPファームウェア | ソース | [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware) |
 
+
+
+# GUI Application for dev kit
+
+<p align="center">
+WIP
+</p>
+
+### 入手先
+
+<p align="center">
+WIP
+</p>
