@@ -65,10 +65,11 @@ gene のハードウェアをベースに、ROHM Solist-AI™ を搭載してキ
 
 #### この開発キット向けの公開リポジトリ
 
-キットに搭載されているファームウェアを、以下のリポジトリで公開しています。
+キットを操作する GUI アプリケーションと、キットに搭載されているファームウェアを公開しています。
 
 | リポジトリ | 内容 | 提供形態 |
 | --- | --- | --- |
+| [gene_solist_ai_gui_app](https://github.com/pban-rd-dev/gene_solist_ai_gui_app) | gene と接続し、Solist-AI の ML 処理を操作する PC アプリケーション | バイナリ（Releases・Linux x64 / Windows x64） |
 | [gene_firmware_for_solist_ai_dev_kit](https://github.com/pban-rd-dev/gene_firmware_for_solist_ai_dev_kit) | gene Core（ESP32-S3）側の gene firmware | プリコンパイル済みライブラリ + hook API の SDK |
 | [solist_ai_module_firmware](https://github.com/pban-rd-dev/solist_ai_module_firmware) | Solist-AI モジュール（ML63Q2537）ファームウェア | バイナリ（Releases） |
 | [solist_ai_iap_firmware](https://github.com/pban-rd-dev/solist_ai_iap_firmware) | Solist-AI モジュール IAP ファームウェア | ソース |
