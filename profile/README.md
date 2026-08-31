@@ -23,7 +23,14 @@ P板.com の自社サービス向け技術開発を担当するチームです�
 
 ## 活動内容
 
-### gene
+開発しているのは次の 2 つです。
+
+- **gene** — センサー PoC 向けのセミカスタム開発 **サービス**
+- **gene + Solist-AI™ 開発キット** — gene をベースにキット化した **製品**
+
+---
+
+### 🛠 gene（サービス）
 
 <p align="center">
   <a href="https://www.p-ban.com/services/gene/"><img src="https://www.p-ban.com/services/gene/images/logo.png" width="160" alt="gene"></a>
@@ -35,11 +42,14 @@ P板.com の自社サービス向け技術開発を担当するチームです�
   <img src="https://www.p-ban.com/services/gene/images/hand_gene2.webp" width="230" alt="手のひらの上に浮かぶ gene Core">
 </p>
 
-回路図と BOM（部品表）を渡すだけで、基板設計・製造からファームウェア・PC アプリまでをワンストップで仕上げる、センサー PoC 特化のセミカスタム開発サービスです。
+回路図と BOM（部品表）をお預かりし、基板設計・製造からファームウェア・PC アプリまでをワンストップで仕上げる、センサー PoC 特化のセミカスタム開発サービスです。
+案件ごとに個別に開発するため、公開リポジトリはありません。
 
 [センサPoCのセミカスタム開発サービス gene | P板.com](https://www.p-ban.com/services/gene/)
 
-### gene + Solist-AI™ 開発キット
+---
+
+### 📦 gene + Solist-AI™ 開発キット（製品）
 
 > 箱を開けたら、その日からAIを試せる。
 
@@ -47,12 +57,14 @@ P板.com の自社サービス向け技術開発を担当するチームです�
   <img src="https://www.p-ban.com/services/gene/images/concept231.webp" width="280" alt="Solist-AI × gene 開発キット">
 </p>
 
-ROHM Solist-AI™ を搭載した gene 開発キット。コードを書かずに、IC 上で「学習→推論」まで。
-ファームウェア実装もモデル変換も専任エンジニアも不要。必要なのは、データとアイデアだけ。
+gene のハードウェアをベースに、ROHM Solist-AI™ を搭載してキット化した製品です。
+コードを書かずに、IC 上で「学習→推論」まで。ファームウェア実装もモデル変換も専任エンジニアも不要。必要なのは、データとアイデアだけ。
 
 [Solist-AI™ × gene｜ノーコード組み込みAI開発キット | P板.com](https://www.p-ban.com/services/gene/solist-ai.html)
 
-#### 公開リポジトリ
+#### この開発キット向けの公開リポジトリ
+
+キットに搭載されているファームウェアを、以下のリポジトリで公開しています。
 
 | リポジトリ | 内容 | 提供形態 |
 | --- | --- | --- |
