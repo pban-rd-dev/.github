@@ -30,7 +30,7 @@ P板.com の自社サービス向け技術開発を担当するチームです�
 
 ---
 
-### 🛠 gene（サービス）
+### gene（サービス）
 
 <p align="center">
   <a href="https://www.p-ban.com/services/gene/"><img src="https://www.p-ban.com/services/gene/images/logo.png" width="160" alt="gene"></a>
@@ -49,7 +49,7 @@ P板.com の自社サービス向け技術開発を担当するチームです�
 
 ---
 
-### 📦 gene + Solist-AI™ 開発キット（製品）
+### gene + Solist-AI™ 開発キット（製品）
 
 > 箱を開けたら、その日からAIを試せる。
 
